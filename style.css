@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #f9f9f9;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  font-family: "Prompt", sans-serif;
+}
+
+input {
+  font-family: "Prompt", sans-serif;
+}
+
+.left-side {
+  min-width: 340px;
+  height: calc(100svh - 16px);
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.left-side .user-wrapper {
+  overflow: hidden;
+  height: calc(100% - 8vh);
+}
+.left-side .user-wrapper:hover {
+  overflow: auto;
+}
+
+.left-side .user-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.left-side .user-list .profile-info {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: all 400ms;
+  border-radius: 16px;
+  padding: 8px 12px;
+}
+
+.left-side .user-list .profile-info:hover {
+  background-color: #dcfbe3;
+  color: #fff;
+}
+
+.left-side .user-list .profile-info .image {
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+.left-side .user-list .profile-info .image .online {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 15px;
+  height: 15px;
+  background: #37e55c;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all 400ms;
+}
+
+.left-side .user-list .profile-info:hover .image .online {
+  border: 3px solid #dcfbe3;
+}
+
+.left-side .user-list .profile-info .avatar {
+  background-image: url("https://creazilla-store.fra1.digitaloceanspaces.com/icons/7912642/avatar-icon-md.png");
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.left-side .user-list .profile-info .image-container {
+  display: flex;
+  gap: 10px;
+}
+
+.left-side .user-list .profile-info .user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding-bottom: 2px;
+}
+
+.left-side .user-list .profile-info .user-info .user-nickname {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #222;
+}
+
+.left-side .user-list .profile-info .user-info .message-review {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  color: #434449;
+}
+
+.left-side .user-list .profile-info .user-info .message-reply-review {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  color: #95999a;
+}
+
+.left-side .user-list .profile-info .indicator {
+  height: 7vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.left-side .user-list .profile-info .indicator .date {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8d8e90;
+}
+
+.left-side .user-list .profile-info .indicator .unread-message-count {
+  width: 36px;
+  height: 17px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background-color: #37e55c;
+  color: #fff;
+  font-size: 11px;
+}
+
+.right-side {
+  width: calc(100% - 340px);
+  height: calc(100svh - 16px);
+  display: flex;
+  flex-flow: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.right-side .header {
+  background-color: #fff;
+  height: 11vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+  padding: 0 18px;
+}
+
+.right-side .header .icon {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.right-side .header .profile-info {
+  display: flex;
+  gap: 10px;
+}
+
+.right-side .header .profile-info .avatar {
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+.right-side .header .profile-info .avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+.right-side .header .profile-info .avatar .online.active {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 15px;
+  height: 15px;
+  background: #37e55c;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.right-side .header .profile-info .user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.right-side .header .profile-info .user-info .user-nickname {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #222;
+}
+
+.right-side .header .profile-info .user-info .user-role {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: #999;
+}
+
+.right-side .chat {
+  flex: auto;
+  padding: 12px 12px 60px 12px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.right-side .chat .messages {
+  display: flex;
+  gap: 12px;
+}
+.right-side .chat .messages.me {
+  flex-direction: row-reverse;
+}
+.right-side .chat .messages.me .message {
+  background: rgba(0, 0, 255, 0.25);
+}
+.right-side .chat .messages.he .message {
+  background: rgba(0, 255, 0, 0.25);
+}
+.right-side .chat .messages .message {
+  padding: 8px 16px;
+  border-radius: 12px;
+}
+.right-side .chat .messages .message p {
+  max-width: 200px;
+}
+.right-side .chat .messages .avatar {
+  width: 50px;
+  height: 50px;
+}
+.right-side .chat .messages .avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.right-side .message-input-wrapper {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(transparent, #fff 60%);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.right-side .message-input {
+  width: calc(100% - 24px);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 20fr 1fr 1fr;
+  height: 6vh;
+  background-color: #f4f4f4;
+  color: #8d8d8d;
+  cursor: pointer;
+  padding: 0 10px;
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  border-radius: 40px;
+}
+
+.right-side .message-input .icon {
+  display: grid;
+  place-items: center;
+}
+
+.right-side .message-input .icon:nth-child(4) {
+  color: #37e55c;
+}
+
+.right-side .message-input input {
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 95%;
+  padding: 0 10px;
+  outline: none;
+  background: transparent;
+}
+
+.left-side .search {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.left-side .search i {
+  transform: translateY(-45%);
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  color: #757575;
+  font-size: 14px;
+}
+
+.left-side .search input {
+  border: none;
+  border-radius: 10px;
+  height: 36px;
+  width: 95%;
+  padding: 0 10px 0 32px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eeeeee;
+  border-radius: 1em;
+}/*# sourceMappingURL=style.css.map */

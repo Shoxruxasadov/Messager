@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="left-side">
+      <div class="search">
+        <input type="text" placeholder="Search" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="user-wrapper">
+        <div class="user-list">
+          <!-- <div class="profile-info">
+            <div class="image-container" onclick="openUserAll('Salom')">
+              <div class="image">
+                <img
+                  class="avatar"
+                  src="https://i.pinimg.com/originals/f2/ca/85/f2ca85016f6d98698bf98c35fd0c483a.jpg"
+                  alt="avatar"
+                />
+              </div>
+              <div class="user-info">
+                <h6 class="user-nickname">Elon</h6>
+                <p class="message-review">How are you?</p>
+              </div>
+            </div>
+            <div class="indicator">
+              <h6 class="date">Fri</h6>
+              <div class="unread-message-count">New</div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </aside>
+    <main class="right-side">
+      <header class="header">
+        <div class="profile-info">
+          <div class="avatar">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2QAPoAnNcdHFQBF6tawgUJ79iJatz34bFZpheIKMu6X6wdpnmBrS0paHUz1GZGkNzWkA&usqp=CAU"
+              alt="avatar"
+              id="avatar"
+            />
+            <div class="online active" id="online-right-side"></div>
+          </div>
+          <div class="user-info">
+            <h6 class="user-nickname" id="nickname">Elon</h6>
+            <p class="user-role" id="is-online">was online on 14 feb</p>
+          </div>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </header>
+      <div class="chat" id="chat"></div>
+      <div class="message-input-wrapper">
+        <div class="message-input">
+          <div class="icon">
+            <i class="fa-regular fa-face-smile"></i>
+          </div>
+          <input
+            type="text"
+            placeholder="Message"
+            onkeypress="enterPress(event)"
+            id="message-input"
+          />
+          <div class="icon">
+            <i class="fa-solid fa-paperclip"></i>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-paper-plane" onclick="send()"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
