@@ -195,6 +195,9 @@ function openUser(id) {
     `;
   }
   document.getElementById("chat").innerHTML = s;
+  document
+    .getElementById("chat")
+    .scrollTo(0, document.getElementById("chat").scrollHeight);
 }
 
 const enterPress = (event) => event.key == "Enter" && send();
@@ -209,8 +212,6 @@ const send = () => {
     openUser(currentUserId);
     drawUsers();
     document.getElementById("message-input").value = "";
-    document.getElementById("chat").scrollTo(0, document.getElementById("chat").scrollHeight);
-
 
     // Shunchaki yozilgan !!
     if (
@@ -231,7 +232,6 @@ const send = () => {
           stoped = true;
           openUser(currentUserId);
           drawUsers();
-          document.getElementById("chat").scrollTo(0, document.getElementById("chat").scrollHeight);
         }, 2000);
       }, 2000);
     }

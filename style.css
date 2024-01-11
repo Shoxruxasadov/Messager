@@ -235,7 +235,7 @@ input {
 
 .right-side .chat {
   flex: auto;
-  padding: 12px 12px 60px 12px;
+  padding: 12px 12px 70px 12px;
   overflow: auto;
   display: flex;
   flex-direction: column;
