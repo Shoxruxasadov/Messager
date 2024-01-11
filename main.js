@@ -231,6 +231,7 @@ const send = () => {
           stoped = true;
           openUser(currentUserId);
           drawUsers();
+          document.getElementById("chat").scrollTo(0, document.getElementById("chat").scrollHeight);
         }, 2000);
       }, 2000);
     }
