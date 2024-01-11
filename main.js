@@ -209,6 +209,8 @@ const send = () => {
     openUser(currentUserId);
     drawUsers();
     document.getElementById("message-input").value = "";
+    document.getElementById("chat").scrollTo(0, document.getElementById("chat").scrollHeight);
+
 
     // Shunchaki yozilgan !!
     if (
